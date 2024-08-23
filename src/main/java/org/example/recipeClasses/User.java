@@ -23,8 +23,8 @@ public class User {
 
     String roles;
 
-    @Generated
-    Date dateRegistered;
+
+    String dateRegistered;
 
     @ManyToOne
     List<Rating> ratings;
@@ -37,7 +37,7 @@ public class User {
 
 
 
-    public User(int id, String username, String email, String password, String roles, Date dateRegistered) {
+    public User(int id, String username, String email, String password, String roles, String dateRegistered) {
         this.id = id;
         this.username = username;
         this.email = email;

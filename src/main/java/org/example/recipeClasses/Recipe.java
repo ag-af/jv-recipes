@@ -41,10 +41,10 @@ public class Recipe {
     User creator;
 
     @GeneratedValue
-    Date dateCreated;
+    String dateCreated;
 
     @GeneratedValue
-    Date lastModified;
+    String lastModified;
 
     @OneToOne
     Image image;
@@ -57,8 +57,8 @@ public class Recipe {
                   String cookingTime,
                   int servings,
                   String difficultyLevel,
-                  Date dateCreated,
-                  Date lastModified) {
+                  String dateCreated,
+                  String lastModified) {
         this.id = id;
         this.title = title;
         this.description = description;
