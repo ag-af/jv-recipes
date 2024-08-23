@@ -3,9 +3,11 @@ package org.example.recipeClasses;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import org.hibernate.annotations.Generated;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class User {
@@ -23,6 +25,17 @@ public class User {
 
     @Generated
     Date dateRegistered;
+
+    @ManyToOne
+    List<Rating> ratings;
+
+    @ManyToOne
+    List<Recipe> recipes;
+
+    @ManyToOne
+    List<Comment> comments;
+
+
 
     public User(int id, String username, String email, String password, String roles, Date dateRegistered) {
         this.id = id;

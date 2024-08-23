@@ -2,6 +2,7 @@ package org.example.recipeClasses;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Ingredient {
@@ -14,6 +15,9 @@ public class Ingredient {
     int quantity;
 
     String unitOfMeasurement;
+
+    @ManyToMany
+    Recipe recipe;
 
     public Ingredient(int id, String name, int quantity, String unitOfMeasurement) {
         this.id = id;

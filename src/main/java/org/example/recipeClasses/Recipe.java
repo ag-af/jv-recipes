@@ -35,6 +35,9 @@ public class Recipe {
     List<Category> categoryList;
 
     @OneToMany
+    List<Comment> comments;
+
+    @OneToMany
     User creator;
 
     @GeneratedValue
@@ -42,6 +45,9 @@ public class Recipe {
 
     @GeneratedValue
     Date lastModified;
+
+    @OneToOne
+    Image image;
 
     public Recipe(int id,
                   String title,

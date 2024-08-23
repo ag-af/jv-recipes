@@ -1,9 +1,6 @@
 package org.example.recipeClasses;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -18,10 +15,10 @@ public class Rating {
     @GeneratedValue
     Date dateRated;
 
-    @ManyToOne
+    @OneToMany
     Recipe associatedRecipe;
 
-    @ManyToOne
+    @OneToMany
     User rater;
 
     public Rating(int id, int value, Date dateRated) {

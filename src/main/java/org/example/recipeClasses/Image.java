@@ -11,13 +11,13 @@ public class Image {
     @Id @GeneratedValue
     int id;
 
-    String filename;
+    String fileName;
 
     String fileData;
 
     public Image(int id, String filename, String fileData) {
         this.id = id;
-        this.filename = filename;
+        this.fileName = filename;
         this.fileData = fileData;
     }
 
